@@ -4,7 +4,7 @@
         <tab id="mage2way" translate="label" sortOrder="110">
             <label>Other Settings</label>
         </tab>
-        <section id="delete-order" sortOrder="10" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="delete_order" sortOrder="10" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Delete Orders</label>
             <tab>mage2way</tab>
             <resource>Mage2way_DeleteOrder::config_deleteorder</resource>
