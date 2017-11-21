@@ -19,8 +19,13 @@ class MassDelete extends Action
      */
     public function execute()
     {
-        echo "Mass Delete Action";
-        exit;
+       $orderIds = $this->getRequest()->getParam('selected');
+       if (empty($orderIds)) {
+           $this->messageManager->addError(__("No order is selected to delete."));
+           $this->_redirect('sales/order/index');
+           return;
+       }
+
     }
 
     protected function _isAllowed()
