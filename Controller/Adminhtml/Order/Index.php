@@ -4,7 +4,7 @@ namespace Mage2way\DeleteOrder\Controller\Adminhtml\Order;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 
-class Delete extends Action
+class Index extends Action
 {
     /**
      * OrderDelete constructor.
@@ -16,16 +16,20 @@ class Delete extends Action
     }
 
     /**
-     * Mass Delete Action
+     * Delete action
      */
     public function execute()
     {
-        echo "Order Delete Action";
+        echo "Hello World";
         exit;
     }
 
+    /**
+     * @inheritdoc
+     */
     protected function _isAllowed()
     {
         return $this->_authorization->isAllowed('deleteorder');
     }
 }
+
