@@ -36,9 +36,8 @@ The extension delete data from the following tables
  - **Order Tax**
     - {sales_order_tax_item}
     - {sales_order_tax}
- - **Order Payment**
-    - {sales_order_payment}
  - **Sales Order**
+    - {sales_order_payment}
     - {sales_order_status_history}
     - {sales_order_address}
     - {sales_order_item}
