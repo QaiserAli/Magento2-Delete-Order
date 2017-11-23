@@ -11,9 +11,26 @@ use Magento\Framework\App\ResourceConnection;
 
 class Order extends AbstractModel
 {
+    /**
+     * @var ManagerInterface
+     */
     protected $messageManagerInterface;
+
+    /**
+     * @var ResourceConnection
+     */
     protected $resource;
 
+    /**
+     * Order constructor.
+     * @param Context $context
+     * @param Registry $registry
+     * @param ManagerInterface $messageManagerInterface
+     * @param ResourceConnection $resource
+     * @param AbstractDb|null $resourceCollection
+     * @param AbstractResource|null $abstractResource
+     * @param array $data
+     */
     public function __construct(
         Context $context,
         Registry $registry,
@@ -28,6 +45,9 @@ class Order extends AbstractModel
         parent::__construct($context, $registry, $abstractResource, $resourceCollection, $data);
     }
 
+    /**
+     * @param array $orderIds
+     */
     public function deleteOrders($orderIds = [])
     {
         try {
@@ -43,6 +63,10 @@ class Order extends AbstractModel
         }
     }
 
+    /**
+     * @param array $orderIds
+     * @return array
+     */
     public function prepareSqlDeleteQuery($orderIds = [])
     {
         $orderIds = implode(",", $orderIds);
@@ -64,6 +88,10 @@ class Order extends AbstractModel
         );
     }
 
+    /**
+     * @param null $orderIds
+     * @return array
+     */
     protected function prepareQuoteDeleteQuery($orderIds = null)
     {
         $sqlQry = [];
@@ -117,6 +145,10 @@ class Order extends AbstractModel
         return $sqlQry;
     }
 
+    /**
+     * @param null $orderIds
+     * @return array
+     */
     protected function prepareInvoiceDeleteQuery($orderIds = null)
     {
         $sqlQry = [];
@@ -143,6 +175,10 @@ class Order extends AbstractModel
         return $sqlQry;
     }
 
+    /**
+     * @param null $orderIds
+     * @return array
+     */
     protected function prepareCreditmemoDeleteQuery($orderIds = null)
     {
         $sqlQry = [];
@@ -169,6 +205,10 @@ class Order extends AbstractModel
         return $sqlQry;
     }
 
+    /**
+     * @param null $orderIds
+     * @return array
+     */
     protected function prepareShipmentDeleteQuery($orderIds = null)
     {
         $sqlQry = [];
@@ -197,6 +237,10 @@ class Order extends AbstractModel
         return $sqlQry;
     }
 
+    /**
+     * @param null $orderIds
+     * @return array
+     */
     protected function prepareSalesTaxDeleteQuery($orderIds = null)
     {
         $sqlQry = [];
@@ -212,6 +256,10 @@ class Order extends AbstractModel
         return $sqlQry;
     }
 
+    /**
+     * @param null $orderIds
+     * @return array
+     */
     protected function prepareRelatedDeleteQuery($orderIds = null)
     {
         $sqlQry = [];
