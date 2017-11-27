@@ -6,6 +6,21 @@ The magento 2 default functionalities does not allow admin or site owner to dele
 So in order to provide such functionality, i developed this module. 
 It's easy to use and works like default magento 2 way. 
 
+The extension comes with the following features
+- Configuration option to enable or disable the module
+- Delete single or multiple order(s) from order grid page
+- Delete single order from the order view page
+- Delete order(s) in bulk
+
+#### Configuration Option
+The configuration option can be found in Stores -> Configuration -> Other Settings -> Delete Orders
+
+
+#### Delete Order(s) from Order Grid 
+
+##### Delete order from order view page
+
+
 
 The extension delete data from the following tables
  - **Order Quotes** 
