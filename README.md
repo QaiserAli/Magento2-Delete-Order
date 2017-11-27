@@ -14,7 +14,7 @@ The extension comes with the following features
 
 #### Configuration Option
 The configuration option can be found in Stores -> Configuration -> Other Settings -> Delete Orders
-
+![screenshot](https://user-images.githubusercontent.com/2330736/33277078-c477dbb6-d397-11e7-9355-b3c278a452fb.png)
 
 #### Delete Order(s) from Order Grid 
 
