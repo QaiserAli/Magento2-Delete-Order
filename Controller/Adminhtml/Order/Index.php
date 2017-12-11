@@ -9,7 +9,7 @@ class Index extends AbstractDeleteAction
     public function execute()
     {
         $resultRedirect = $this->resultRedirectFactory->create();
-        $orderId = $this->getRequest()->getParam('entity_id');
+        $orderId = $this->getRequest()->getParam('order_id');
         if (empty($orderId)) {
             $this->messageManager->addError(__("Order doesn't exist or cannot be deleted."));
             return $resultRedirect->setPath('sales/order/index');

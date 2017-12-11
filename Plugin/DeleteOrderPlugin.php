@@ -44,7 +44,7 @@ class DeleteOrderPlugin extends ViewAction
                          'href' => $this->urlBuilder->getUrl(
                              $deleteUrlPath,
                                 [
-                                    'entity_id' => $item['entity_id']
+                                    'order_id' => $item['entity_id']
                                 ]
                             ),
                         'label' => __('Delete'),
