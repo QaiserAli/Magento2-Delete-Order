@@ -69,7 +69,7 @@ class Order extends AbstractModel
      */
     public function prepareSqlDeleteQuery($orderIds = [])
     {
-        $orderIds = implode(",", $orderIds);
+        $orderIds = is_array($orderIds) ? implode(",", $orderIds) : $orderIds;
 
         $quoteDeleteQuery = $this->prepareQuoteDeleteQuery($orderIds);
         $invocieDeleteQuery = $this->prepareInvoiceDeleteQuery($orderIds);

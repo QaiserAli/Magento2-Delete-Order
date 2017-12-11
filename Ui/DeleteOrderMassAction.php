@@ -12,8 +12,6 @@ class DeleteOrderMassAction extends MassAction
      */
     protected $helper;
 
-    protected $urlRedirect;
-
     /**
      * DeleteOrderMassAction constructor.
      * @param ContextInterface $context

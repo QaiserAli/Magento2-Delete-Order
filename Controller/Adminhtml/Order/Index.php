@@ -1,35 +1,27 @@
 <?php
 namespace Mage2way\DeleteOrder\Controller\Adminhtml\Order;
 
-use Magento\Backend\App\Action;
-use Magento\Backend\App\Action\Context;
-
-class Index extends Action
+class Index extends AbstractDeleteAction
 {
-    /**
-     * OrderDelete constructor.
-     * @param Action\Context $context
-     */
-    public function __construct(Context $context)
-    {
-        parent::__construct($context);
-    }
-
     /**
      * Delete action
      */
     public function execute()
     {
-        echo "Hello World";
-        exit;
-    }
+        $resultRedirect = $this->resultRedirectFactory->create();
+        $orderId = $this->getRequest()->getParam('entity_id');
+        if (empty($orderId)) {
+            $this->messageManager->addError(__("Order doesn't exist or cannot be deleted."));
+            return $resultRedirect->setPath('sales/order/index');
+        }
 
-    /**
-     * @inheritdoc
-     */
-    protected function _isAllowed()
-    {
-        return $this->_authorization->isAllowed('deleteorder');
+        try {
+            $this->orderFactory->create()->deleteOrders($orderId);
+        } catch (\Exception $e) {
+            $this->messageManager->addError(__($e->getMessage()));
+        }
+
+        return $resultRedirect->setPath('sales/order/index');
     }
 }
 
