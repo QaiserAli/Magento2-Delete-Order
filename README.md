@@ -1,5 +1,3 @@
-##### Module is under development ......
-
 #### DeleteOrder Extension
 
 The magento 2 default functionalities does not allow admin or site owner to delete test order(s) or any other type of order(s) that has been canceled, closed or shouldn't exist anymore.
@@ -26,7 +24,7 @@ The following options can be found in Sales -> Orders
 ![screenshot](https://user-images.githubusercontent.com/2330736/33839085-9def0a5a-de91-11e7-908e-917e76cdc037.png)
 
 ##### Delete order from order view page
-A delete option is added to the order toolbar, where an order can be deleted from the oder view page.
+Deleted opiton is added where an order can be deleted from the order view page.
 ![screenshot](https://user-images.githubusercontent.com/2330736/33842118-ef0c09a8-de99-11e7-911a-5195689bed3c.png)
 
 
