@@ -17,6 +17,13 @@ The configuration option can be found in Stores -> Configuration -> Other Settin
 ![screenshot](https://user-images.githubusercontent.com/2330736/33277078-c477dbb6-d397-11e7-9355-b3c278a452fb.png)
 
 #### Delete Order(s) from Order Grid 
+The following options can be found in Sales -> Orders
+
+- Orders Grid -> Delete single|bulk order(s)  
+![screenshot](https://user-images.githubusercontent.com/2330736/33839003-5c474f68-de91-11e7-83e2-8867748a8880.png)
+
+- Orders Grid -> Delete single order
+![screenshot](https://user-images.githubusercontent.com/2330736/33839085-9def0a5a-de91-11e7-908e-917e76cdc037.png)
 
 ##### Delete order from order view page
 
